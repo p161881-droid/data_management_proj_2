@@ -48,7 +48,7 @@ docker run -d \
   -p 1080:1080 \
 Image_name
 ```
-
+But we can't change the Docker port mapping because the container is already running.
 Except for those specific ports, all other ports (like 12778) are unusable and can't be accessed from outside Docker. 
 
 If you want to use port 12778, you need to set up an SSH tunnel in Windows CMD to map port 12778 from inside Docker to the outside world.
