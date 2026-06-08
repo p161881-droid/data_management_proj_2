@@ -72,7 +72,7 @@ if you open web console,you can see
 <img width="1086" height="180" alt="图片" src="https://github.com/user-attachments/assets/23c8dc7e-4078-43c9-8532-c09aefed2c1d" />
 
 
-### Why Do I Say the Hadoop Sandbox Runs in Docker?
+# Why Do I Say the Hadoop Sandbox Runs in Docker?
 
 When the system boots up, you can clearly see that it automatically enters the Docker virtual machine.
 
