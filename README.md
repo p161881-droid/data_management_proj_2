@@ -66,11 +66,11 @@ Here, I mapped port 12778 inside Docker to port 1234 on Windows. Now I can acces
 
 P.S.
 
-Actually, you can use port 8888 start service and access the notebook — port 8888 is pre-opened by Docker. You can just open `127.0.0.1:8888` in your Windows browser to see the notebook page inside the VM. But the code won't run, because code uses WebSocket connections. Probably due to multiple layers of network translation and cross-origin restrictions, the code cells just can't execute. (Unless you use an SSH tunnel — for example, mapping 1234 to 8888.)
+Actually, you can use port 8888 start service and access the notebook — port 8888 is pre-opened by Docker. You can just open `127.0.0.1:8888` in your Windows browser to see the notebook page inside the VM. But the code won't run, because code uses WebSocket connections. Probably due to multiple layers of network translation and cross-origin restrictions, the code cells just can't execute. 
 <img width="2119" height="580" alt="图片" src="https://github.com/user-attachments/assets/9591eb45-d345-4024-888f-e4d60cd91613" />
 if you open web console,you can see
 <img width="1086" height="180" alt="图片" src="https://github.com/user-attachments/assets/23c8dc7e-4078-43c9-8532-c09aefed2c1d" />
-
+(Unless you use an SSH tunnel — for example, mapping 1234 to 8888.)
 
 # How to check if hadoop-sandbox is running in Docker?
 
