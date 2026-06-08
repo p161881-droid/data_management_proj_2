@@ -29,15 +29,17 @@ PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS="notebook --ip=0.0.0.0 
     --NotebookApp.password_required=False" \
 Pyspark
 ```
-<img width="525" height="368" alt="图片" src="https://github.com/user-attachments/assets/5c279783-491d-48d8-85af-4a55dbc1500b" />
+<img width="572" height="401" alt="图片1" src="https://github.com/user-attachments/assets/8410b4e0-1e4b-401c-8b22-4e7c5aca448f" />
 
 Here, I randomly picked port 12778 and added a port forwarding rule in VirtualBox.
 
-<img width="414" height="175" alt="图片" src="https://github.com/user-attachments/assets/efd172c2-1ac1-400c-b53c-06737e16a3ec" />
+<img width="413" height="175" alt="图片2" src="https://github.com/user-attachments/assets/165263d0-ca6d-4eea-97dc-723d682627b7" />
+
 
 But I still couldn't access it. That's because the Hadoop sandbox uses nested virtualization(a docker inside a VM).
 
-<img width="416" height="276" alt="图片" src="https://github.com/user-attachments/assets/80782d95-a74b-4b0a-a5b3-7aee4cdabef1" />
+<img width="413" height="274" alt="图片3" src="https://github.com/user-attachments/assets/dc986c07-438d-4849-83cb-33f2a1467b6c" />
+
 
 VirtualBox is a virtual machine, and the Hadoop sandbox is a VM inside a VM — it actually runs in Docker. And in Docker, you have to explicitly specify port mappings, like this:
 
@@ -54,11 +56,12 @@ Except for those specific ports, all other ports (like 12778) are unusable and c
 
 If you want to use port 12778, you need to set up an SSH tunnel in Windows CMD to map port 12778 from inside Docker to the outside world.
 
-<img width="574" height="303" alt="图片" src="https://github.com/user-attachments/assets/73f40342-ceb9-4f52-b035-256d64df2483" />
+<img width="493" height="260" alt="图片4" src="https://github.com/user-attachments/assets/b969c88d-fed8-48b9-8927-411c02457594" />
+
 
 Here, I mapped port 12778 inside Docker to port 1234 on Windows. Now I can access the 12778 service inside the Hadoop Docker container through port 1234 on Windows.
 
-<img width="988" height="535" alt="图片" src="https://github.com/user-attachments/assets/7b26e857-9cd4-40fd-b994-40f3bcf28a17" />
+<img width="432" height="365" alt="图片6" src="https://github.com/user-attachments/assets/6e7cee65-2758-4639-891d-684ca7fbcc79" />
 
 
 P.S.
