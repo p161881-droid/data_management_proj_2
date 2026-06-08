@@ -70,3 +70,35 @@ Actually, you can use port 8888 start service and access the notebook — port 8
 <img width="2119" height="580" alt="图片" src="https://github.com/user-attachments/assets/9591eb45-d345-4024-888f-e4d60cd91613" />
 if you open web console,you can see
 <img width="1086" height="180" alt="图片" src="https://github.com/user-attachments/assets/23c8dc7e-4078-43c9-8532-c09aefed2c1d" />
+
+
+### Why Do I Say the Hadoop Sandbox Runs in Docker?
+
+When the system boots up, you can clearly see that it automatically enters the Docker virtual machine.
+
+<img width="404" height="251" alt="图片5" src="https://github.com/user-attachments/assets/d72d40c4-88b8-43b1-ad9d-d85cadefb372" />
+
+If you want to stay in the real host, you can set the network to bridged mode instead of NAT. Docker will fail to start in that case, and after the failure, you'll be left in the real host machine.
+
+Like this — we're logged into the real host `@sandbox-host`, not the Docker container `@sandbox-hdp`.From here, we can check the Docker version:
+
+<img width="407" height="266" alt="图片7" src="https://github.com/user-attachments/assets/477e875f-4d9b-4f45-a692-746eaaef078f" />
+
+
+```bash
+docker --version
+```
+The version is **18.03.0**.
+
+And list the Hadoop sandbox images:
+
+```bash
+docker images
+```
+
+<img width="442" height="308" alt="图片8" src="https://github.com/user-attachments/assets/c67f1ab5-1aaf-42d8-bbf9-df7db2c01b50" />
+
+There are two images:
+
+- `hortonworks/sandbox-proxy` — 1.0 — 109MB
+- `hortonworks/sandbox-hdp-security` — 2.6.5 — 21.3GB
