@@ -78,7 +78,7 @@ When the system boots up, you can clearly see that it automatically enters the D
 
 <img width="404" height="251" alt="图片5" src="https://github.com/user-attachments/assets/d72d40c4-88b8-43b1-ad9d-d85cadefb372" />
 
-If you want to stay in the real host, you can set the network to bridged mode instead of NAT. Docker will fail to start in that case, and after the failure, you'll be left in the real host machine.
+If you want to stay in the real host, you can set the network to bridged mode instead of NAT. Docker will fail to start docker, and after the failure, you'll be left in the real host machine.
 
 Like this — we're logged into the real host `@sandbox-host`, not the Docker container `@sandbox-hdp`.From here, we can check the Docker version:
 
