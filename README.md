@@ -54,7 +54,7 @@ But we can't change the Docker port mapping because the container is already run
 
 Except for those specific ports, all other ports (like 12778) are unusable and can't be accessed from outside Docker. 
 
-If you want to use port 12778, you need to set up an SSH tunnel in Windows CMD to map port 12778 from inside Docker to the outside world.
+If you want to use port 12778, you need to set up an SSH tunnel in Windows CMD to map port 12778 from inside Docker to the outside world.(PS. Think of it like a small VPN for just that one port)
 
 <img width="493" height="260" alt="图片4" src="https://github.com/user-attachments/assets/b969c88d-fed8-48b9-8927-411c02457594" />
 
