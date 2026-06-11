@@ -27,7 +27,7 @@ PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS="notebook --ip=0.0.0.0 
     --NotebookApp.allow_remote_access=True \
     --NotebookApp.disable_check_xsrf=True \
     --NotebookApp.password_required=False" \
-Pyspark
+pyspark
 ```
 <img width="572" height="401" alt="图片1" src="https://github.com/user-attachments/assets/8410b4e0-1e4b-401c-8b22-4e7c5aca448f" />
 
@@ -55,6 +55,7 @@ But we can't change the Docker port mapping because the container is already run
 Except for those specific ports, all other ports (like 12778) are unusable and can't be accessed from outside Docker. 
 
 If you want to use port 12778, you need to set up an SSH tunnel in Windows CMD to map port 12778 from inside Docker to the outside world.(PS. Think of it like a small VPN for just that one port)
+ssh -p 2222 -L 1234:localhost:12778 root@127.0.0.1 -N
 
 <img width="493" height="260" alt="图片4" src="https://github.com/user-attachments/assets/b969c88d-fed8-48b9-8927-411c02457594" />
 
