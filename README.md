@@ -48,7 +48,7 @@ Here, I've read some data from MongoDB.
 
 ## Visual result
 
-This pictures hows the number of ratings for the top 10 movies
+This pictures shows the number of ratings for the top 10 movies
 
 <img width="712" height="424" alt="image" src="https://github.com/user-attachments/assets/11869ebb-8538-46c8-9506-a880eb949995" />
 
